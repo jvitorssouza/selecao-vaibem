@@ -1,0 +1,15 @@
+.idea/
+.vscode/
+node_modules/
+build/
+tmp/
+temp/
+
+#dotenv
+.env
+
+#Test Coverage
+/coverage/
+
+#DOCKER DATABASE VOLUME
+database_data

@@ -1,0 +1,38 @@
+version: '3.7'
+services:
+  vaibem_api:
+    container_name: vaibem_api
+    depends_on:
+      - vaibem_database
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+    networks:
+      - selecao_vaibem
+    command: yarn start:dev
+
+  vaibem_database:
+    container_name: vaibem_database
+    image: postgres:latest
+    restart: always
+    volumes:
+      - ./database_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_USER: "VaiBem"
+      POSTGRES_PASSWORD: "V@1B3M"
+      POSTGRES_DB: "SelecaoVaiBem"
+    ports:
+        - 5423:5432
+    networks:
+      - selecao_vaibem
+
+volumes:
+  database_data: 
+
+networks:
+    selecao_vaibem:
