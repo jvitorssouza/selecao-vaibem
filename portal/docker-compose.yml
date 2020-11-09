@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+    selecao_vaibem_portal:
+        build: .
+        container_name: selecao_vaibem_portal
+        ports:
+            - "8008:3333"
+        networks:
+            - selecao_vaibem
+networks:
+    selecao_vaibem:
+        external:
+            name: selecao_vaibem
