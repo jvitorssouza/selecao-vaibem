@@ -17,7 +17,7 @@ Para acessar o sistema você pode utilizar uma das seguintes credenciais:
 
 **Usuário limitado**:
 
-- **Email**: super@cartaovaibem.com.br
+- **Email**: limited@cartaovaibem.com.br
 - **Senha**: 123456
 
 # Screenshots
